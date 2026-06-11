@@ -1,0 +1,286 @@
+Com certeza! Vamos dar uma identidade visual para a revista. Escolhi uma paleta baseada em um Azul Petróleo Escuro (Teal/Cyan escuro), que transmite profissionalismo, modernidade e elegância, combinada com variações mais claras e vibrantes da mesma cor para criar contraste e hierarquia visual.
+
+O fundo também ganhou um tom gelo bem suave para dar uma sensação mais premium de revista fosca.
+
+Aqui estão os códigos atualizados. O HTML mudou levemente para incluir novas tags de categorias, e o CSS foi completamente reestilizado com foco nessa cor.
+
+Código HTML (index.html)
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital Moderna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="magazine-header">
+        <div class="header-top">
+            <span>Edição Nº 42 — Junho 2026</span>
+            <span>Acesse Online</span>
+        </div>
+        <h1 class="magazine-title">PERSPECTIVA</h1>
+        <div class="accent-line"></div>
+    </header>
+
+    <main class="magazine-grid">
+        
+        <article class="main-article">
+            <div class="img-container">
+                <img src="https://picsum.photos/800/450" alt="Imagem de destaque" class="article-img">
+                <span class="category-badge cat-tech">Tecnologia</span>
+            </div>
+            <div class="article-content">
+                <h2>O Futuro das Cidades Inteligentes e o Impacto no Cotidiano</h2>
+                <p class="lead">Como a integração de novas tecnologias e inteligência artificial está transformando o planejamento urbano e a vida dos cidadãos nas metrópoles.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed ex sit amet dynamic link diam feugiat dictum. Fusce egestas tristique vulputate. Idem iste futurum providat natura sapiens. Torquatos nostros? Quos tu paulo ante cum memoriter, tum etiam erga nos amice et benivole collegisti.</p>
+                <a href="#" class="read-more">Ler artigo completo →</a>
+            </div>
+        </article>
+
+        <aside class="sidebar-articles">
+            <h2 class="sidebar-title">Em Destaque</h2>
+            
+            <article class="side-article">
+                <span class="category-tag">Cultura</span>
+                <h3>A Renascença do Vinil na Era do Streaming</h3>
+                <p>Por que os discos de vinil continuam quebrando recordes de vendas em um mundo totalmente digital.</p>
+            </article>
+
+            <article class="side-article">
+                <span class="category-tag">Economia</span>
+                <h3>Mercado Financeiro e Tendências</h3>
+                <p>Análise completa sobre as oscilações do mercado e o que os especialistas preveem para o trimestre.</p>
+            </article>
+
+            <article class="side-article">
+                <span class="category-tag">Estilo de Vida</span>
+                <h3>O Minimalismo como Resposta ao Caos</h3>
+                <p>Menos pressa, mais presença. Descubra como desacelerar a rotina traz benefícios reais.</p>
+            </article>
+
+        </aside>
+
+    </main>
+
+    <footer class="magazine-footer">
+        <div class="accent-line"></div>
+        <p>&copy; 2026 Revista Perspectiva. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+Código CSS (style.css)
+CSS
+/* Definição das variáveis de cor baseadas no Azul Petróleo */
+:root {
+    --primary-dark: #0f303f;     /* Azul petróleo bem escuro (títulos e elementos fortes) */
+    --primary-main: #1d5c75;     /* Azul petróleo padrão (destaques e botões) */
+    --primary-light: #4ba3c3;    /* Azul mais claro (tags secundárias) */
+    --primary-bg: #eef5f8;       /* Fundo suave azulado para blocos de destaque */
+    --body-bg: #f5f8fa;          /* Fundo da revista (tom gelo limpo) */
+    --text-color: #2b3a42;       /* Texto escuro levemente azulado para não ser preto puro */
+}
+
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.magazine-header {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-main);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.magazine-title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--primary-dark);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 10px 0;
+}
+
+/* Linha de sotaque colorida */
+.accent-line {
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+    margin: 15px 0;
+}
+
+/* Grid Principal */
+.magazine-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 40px;
+}
+
+/* Artigo Principal */
+.main-article {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(15, 48, 63, 0.05);
+}
+
+.img-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main-article .article-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Badge flutuante na imagem */
+.category-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background-color: var(--primary-dark);
+    color: #fff;
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.main-article h2 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-main);
+    margin-bottom: 15px;
+    border-left: 3px solid var(--primary-light);
+    padding-left: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-main);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: var(--primary-light);
+}
+
+/* Barra Lateral */
+.sidebar-articles {
+    background-color: var(--primary-bg);
+    padding: 25px;
+    border-top: 4px solid var(--primary-dark);
+}
+
+.sidebar-title {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.side-article {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(29, 92, 117, 0.15);
+}
+
+.side-article:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.category-tag {
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--primary-light);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.side-article h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.side-article p {
+    font-size: 0.95rem;
+    color: #4a5e68;
+}
+
+/* Rodapé */
+.magazine-footer {
+    max-width: 1200px;
+    margin: 60px auto 20px auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    color: var(--primary-main);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .magazine-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .magazine-title {
+        font-size: 2.8rem;
+    }
+
+    .main-article h2 {
+        font-size: 1.8rem;
+    }
+}
